@@ -3,6 +3,7 @@ type: docker
 name: default
 
 steps:
-- name: greeting
+- image: busybox
+  name: greeting
   commands:
   - echo hello from docker!
