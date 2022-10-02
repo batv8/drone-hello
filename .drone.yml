@@ -3,7 +3,8 @@ type: docker
 name: default
 
 steps:
-- image: busybox
-  name: greeting
+- name: build and run go hello world
+  image: golang
   commands:
-  - echo hello from docker!
+  - go build -o main main.go
+  - ./main
